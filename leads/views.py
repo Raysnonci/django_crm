@@ -3,10 +3,10 @@ from django.http import HttpResponse
 from .models import Lead
 
 # Create your views here.
-def home(request):
+def lead_list(request):
     leads = Lead.objects.all()
     context = {
         "leads": leads
     }
     # return HttpResponse('oyyyy')
-    return render(request, "leads/home.html", context)
+    return render(request, "lead_list.html", context)

@@ -4,5 +4,5 @@ from leads.views import *
 app_name = 'leads'
 
 urlpatterns = [
-    path('', home)
+    path('', lead_list)
 ]
