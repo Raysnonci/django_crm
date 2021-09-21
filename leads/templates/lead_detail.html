@@ -8,33 +8,16 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
-    <title>Lead List</title>
+    <title>Lead Detail</title>
   </head>
   <body>
-    <h1>Lead List</h1>
+    <h1>Lead Detail</h1>
 
-    <table class="table">
-    <thead>
-        <tr>
-        <th scope="col">#</th>
-        <th scope="col">First Name</th>
-        <th scope="col">Last Name</th>
-        <th scope="col">Age</th>
-        <th scope="col">Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for lead in leads  %}
-              <tr>
-                  <th scope="row">1</th>
-                  <td>{{ lead.first_name }}</td>
-                  <td>{{ lead.last_name }}</td>
-                  <td>{{ lead.age }}</td>
-                  <td><a href="/leads/{{ lead.pk }}/">Detail</a></td>
-              </tr>
-        {% endfor %}
-    </tbody>
-    </table>
+    <p>First Name: {{ lead.first_name }}</p>
+    <p>Last Name: {{ lead.last_name }}</p>
+    <p>Age: {{ lead.age }}</p>
+
+    <a href="/leads">Back to the list</a>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
